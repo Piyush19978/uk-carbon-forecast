@@ -1,0 +1,60 @@
+{
+  "features": [
+    "h",
+    "y_now",
+    "y_lag_1h",
+    "y_lag_3h",
+    "y_lag_6h",
+    "y_lag_24h",
+    "roll_mean_24h",
+    "roll_std_24h",
+    "roll_mean_7d",
+    "y_target_minus_1d",
+    "y_target_minus_7d",
+    "hod",
+    "dow",
+    "is_weekend",
+    "doy_sin",
+    "doy_cos",
+    "mix_wind_now",
+    "mix_gas_now",
+    "mix_solar_now",
+    "mix_imports_now",
+    "mix_nuclear_now",
+    "mix_biomass_now",
+    "mix_coal_now",
+    "mix_hydro_now"
+  ],
+  "target": "dy = y - y_now (add y_now back)",
+  "buckets_half_hours": [
+    [
+      1,
+      4
+    ],
+    [
+      5,
+      12
+    ],
+    [
+      13,
+      24
+    ],
+    [
+      25,
+      36
+    ],
+    [
+      37,
+      48
+    ]
+  ],
+  "cqr_offset_by_bucket": {
+    "0": -0.9121779595405997,
+    "1": 1.7188018717799096,
+    "2": 3.472881183685587,
+    "3": 5.268243238514586,
+    "4": 6.1045332752918
+  },
+  "alpha": 0.2,
+  "trained_on": "2023-01 to 2024-06"
+}
